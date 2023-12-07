@@ -10,4 +10,5 @@
     <string name="name_login"> Ingresar</string>
     <string name="name_welcome"> Bienvenido</string>
     <string name="name_info"> Por favor inicia sesión con tu información. </string>
+    <string name="get">Empezar</string>
 </resources>

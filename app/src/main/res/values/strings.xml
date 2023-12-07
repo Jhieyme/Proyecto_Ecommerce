@@ -9,4 +9,6 @@
     <string name="name_login"> Login</string>
     <string name="name_welcome"> Welcome</string>
     <string name="name_info"> Please log in with your information.</string>
+    <string name="get">Get started</string>
+
 </resources>
