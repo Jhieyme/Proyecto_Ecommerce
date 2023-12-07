@@ -17,27 +17,20 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
-
         binding.bottomNavigation.background = null
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.bottom_home -> openFragment(HomeFragment(), "Inicio")
+                R.id.bottom_home -> openFragment(HomeFragment())
             }
             true
         }
         fragmentManager = supportFragmentManager
-        openFragment(HomeFragment(), "Inicio")
+        openFragment(HomeFragment())
     }
 
-    private fun openFragment(fragment: Fragment, s: String) {
+    private fun openFragment(fragment: Fragment) {
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fcv_main, fragment)
         fragmentTransaction.commit()
-        setTitle(title)
-    }
-
-    private fun setTitle(title: String) {
-        supportActionBar?.title = title
     }
 }
