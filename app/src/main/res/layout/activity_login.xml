@@ -51,7 +51,7 @@
                 android:id="@+id/linearLayout11"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
-                android:background="@drawable/img_login"
+                android:background="@drawable/acces_login"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@+id/textView4"
                 app:layout_constraintEnd_toEndOf="parent"
