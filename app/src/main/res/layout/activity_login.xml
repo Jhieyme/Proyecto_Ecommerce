@@ -166,7 +166,6 @@
                 android:layout_gravity="center"
                 android:layout_marginHorizontal="16dp"
                 android:backgroundTint="@color/orange"
-                android:enabled="false"
                 android:text="@string/name_login"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
