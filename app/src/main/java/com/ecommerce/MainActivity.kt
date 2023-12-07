@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavigation.background = null
         binding.bottomNavigation.setOnItemSelectedListener { item ->
-            when(item.itemId){
+            when (item.itemId) {
                 R.id.bottom_home -> openFragment(HomeFragment(), "Inicio")
             }
             true
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         openFragment(HomeFragment(), "Inicio")
     }
 
-    private fun openFragment(fragment: Fragment, s: String){
+    private fun openFragment(fragment: Fragment, s: String) {
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fcv_main, fragment)
         fragmentTransaction.commit()

@@ -7,9 +7,11 @@
     android:background="#F4F6FA"
     android:padding="10dp"
     tools:context=".Fragments.HomeFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
@@ -40,6 +42,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
@@ -57,20 +60,21 @@
                 android:layout_weight="1"
                 app:cardCornerRadius="20dp">
 
-                <androidx.appcompat.widget.SearchView
+                <SearchView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none"
+                    android:inputType="text"
+                    android:queryHint="Selecciona tu comida favorita"
                     android:textAlignment="center"
                     app:iconifiedByDefault="false"
-                    app:queryBackground="@android:color/transparent"
-                    app:queryHint="Search your favorite menu">
+                    app:queryBackground="@android:color/transparent" />
 
-                </androidx.appcompat.widget.SearchView>
+
             </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
@@ -95,46 +99,18 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    app:cardCornerRadius="10dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                         />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    app:cardCornerRadius="10dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                         />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    app:cardCornerRadius="10dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                         />
-                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 
 
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
@@ -159,6 +135,7 @@
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -185,7 +162,7 @@
                 android:padding="10dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvPizzaHome"
+                    android:id="@+id/rvDessertPopular"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
