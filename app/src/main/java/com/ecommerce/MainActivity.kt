@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.ecommerce.Fragments.DessertFragment
 import com.ecommerce.Fragments.HomeFragment
 import com.ecommerce.databinding.ActivityMainBinding
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.bottom_home -> openFragment(HomeFragment())
+                R.id.bottom_menu -> openFragment(DessertFragment())
                 R.id.bottom_logout -> showDialogLogout()
             }
             true
