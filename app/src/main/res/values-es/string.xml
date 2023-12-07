@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EF_Ecommerce</string>
+    <string name="home"> Inicio</string>
+    <string name="menu"> Menú</string>
+    <string name="favorite"> Favoritos</string>
+    <string name="logout"> Salir</string>
+    <string name="text_password"> Contraseña</string>
+    <string name="text_email"> Correo electronico</string>
+    <string name="name_login"> Ingresar</string>
+    <string name="name_welcome"> Bienvenido</string>
+    <string name="name_info"> Por favor inicia sesión con tu información. </string>
+</resources>
