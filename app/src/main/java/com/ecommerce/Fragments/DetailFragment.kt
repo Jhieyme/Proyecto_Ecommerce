@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
+import com.ecommerce.R
 import com.ecommerce.databinding.FragmentDetailBinding
 import com.ecommerce.model.DessertEntity
 import com.ecommerce.model.DessertItem
@@ -41,7 +42,13 @@ class DetailFragment : Fragment() {
 
         }
 
-
+        binding.btnBack.setOnClickListener(View.OnClickListener {
+            val fragmentManager = requireActivity().supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.replace(R.id.fcv_main, DessertFragment())
+            transaction.addToBackStack(null)
+            transaction.commit()
+        })
 
 
 
