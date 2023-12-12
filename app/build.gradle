@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.ecommerce'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ecommerce"
@@ -52,4 +52,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
+
+    // Room - DataBase
+    var roomVersion = "2.6.1"
+    implementation("androidx.room:room-ktx:$roomVersion")
+    annotationProcessor("androidx.room:room-compiler:$roomVersion")
 }
