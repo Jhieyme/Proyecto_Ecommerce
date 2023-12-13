@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ecommerce.Adapter.FavoriteAdapter
+import com.ecommerce.R
 import com.ecommerce.databinding.FragmentFavoritesBinding
 import com.ecommerce.model.DessertEntity
 import com.ecommerce.database.AppDataBase
@@ -24,6 +25,15 @@ class FavoriteFragment : Fragment() {
     ): View? {
         binding = FragmentFavoritesBinding.inflate(inflater, container, false)
         setupRecyclerView()
+
+        binding.btnBack.setOnClickListener(View.OnClickListener {
+            val fragmentManager = requireActivity().supportFragmentManager
+            val transaction = fragmentManager.beginTransaction()
+            transaction.replace(R.id.fcv_main, HomeFragment())
+            transaction.addToBackStack(null)
+            transaction.commit()
+        })
+
         return binding.root
     }
 
