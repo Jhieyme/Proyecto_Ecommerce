@@ -7,12 +7,10 @@
     tools:context=".Fragments.DetailFragment">
 
     <LinearLayout
-        android:id="@+id/linearLayout7"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -23,7 +21,7 @@
             android:contentDescription="@null"
             android:orientation="vertical"
             android:scaleType="centerCrop"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"></ImageView>
 
     </LinearLayout>
 
@@ -33,9 +31,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <androidx.cardview.widget.CardView
@@ -58,17 +53,11 @@
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
         <androidx.cardview.widget.CardView
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginEnd="22dp"
-
+            android:layout_marginStart="250dp"
             app:cardCornerRadius="10dp">
 
             <ImageButton
@@ -105,9 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0">
 
@@ -131,11 +118,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="0dp">
 
                 <TextView
                     android:id="@+id/textViewProductDescription"
@@ -155,11 +141,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                app:layout_constraintVertical_bias="0.032">
+                app:layout_constraintVertical_bias="0.032"
+                tools:layout_editor_absoluteX="0dp">
 
                 <TextView
                     android:id="@+id/textViewProductPrice"
@@ -177,31 +162,41 @@
 
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textViewProductSize"
+            <LinearLayout
+                android:id="@+id/linearLayoutSize"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp"
-                android:text="Size"
-                android:textSize="20sp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="0.032"
+                tools:layout_editor_absoluteX="0dp">
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+                <TextView
+                    android:id="@+id/textViewProductSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewProductName"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Size"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="22dp"
                 android:background="@drawable/detail_background"
                 android:elevation="2dp"
                 android:orientation="horizontal"
-
+                app:layout_constraintBottom_toTopOf="@+id/linearButton"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewProductSize">
-
+                app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
                     android:id="@+id/txtCodigo"
@@ -211,7 +206,6 @@
                     android:background="@null"
                     android:gravity="center"
                     android:hint="Choose size"
-                    android:padding="10dp"
                     android:paddingEnd="260dp"
                     android:singleLine="true"
                     android:textColor="@color/black"
@@ -226,21 +220,20 @@
 
             </LinearLayout>
 
-            <!--            <Spinner-->
-            <!--                android:id="@+id/spinner"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="60dp"-->
-            <!--                android:layout_gravity="center_horizontal"-->
-            <!--                android:layout_marginBottom="32dp"-->
-            <!--                android:layout_margin="22dp"-->
-            <!--                android:background="@android:drawable/btn_dropdown"-->
-            <!--                app:layout_constraintBottom_toTopOf="@+id/linearButton"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintHorizontal_bias="0.354"-->
-            <!--                app:layout_constraintStart_toStartOf="parent" />-->
+<!--            <Spinner-->
+<!--                android:id="@+id/spinner"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="60dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginBottom="32dp"-->
+<!--                android:layout_margin="22dp"-->
+<!--                android:background="@android:drawable/btn_dropdown"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/linearButton"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.354"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView3"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="22dp"
@@ -249,20 +242,20 @@
                 app:cardCornerRadius="15dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <LinearLayout
                     android:id="@+id/linearCantidad"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/btnCantidad"
                         android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_height="match_parent"
                         android:layout_centerHorizontal="true"
-                        android:layout_margin="10dp"
+                        android:layout_marginStart="13dp"
                         android:backgroundTint="#EBEBEB"
                         android:gravity="center"
                         android:text="1"
@@ -272,16 +265,15 @@
                     <LinearLayout
                         android:layout_width="39dp"
                         android:layout_height="60dp"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:orientation="vertical">
 
                         <ImageButton
                             android:id="@+id/btn_up"
                             android:layout_width="30dp"
-                            android:layout_height="0dp"
+                            android:layout_height="15dp"
+                            android:layout_marginTop="13dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_weight="1"
-
                             android:backgroundTint="@android:color/transparent"
                             android:src="@drawable/ic_arrow_up"
                             android:textColor="#161616"
@@ -290,9 +282,8 @@
                         <ImageButton
                             android:id="@+id/btn_down"
                             android:layout_width="30dp"
-                            android:layout_height="0dp"
+                            android:layout_height="15dp"
                             android:layout_centerHorizontal="true"
-                            android:layout_weight="1"
                             android:backgroundTint="@android:color/transparent"
                             android:src="@drawable/ic_arrow_down"
                             android:textColor="#161616"
@@ -305,16 +296,18 @@
             </androidx.cardview.widget.CardView>
 
 
+
             <LinearLayout
                 android:id="@+id/linearButton"
-                android:layout_width="250dp"
+                android:layout_width="280dp"
                 android:layout_height="60dp"
-
+                android:layout_margin="22dp"
+                android:layout_marginEnd="22dp"
+                android:gravity="center"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cardView3"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -332,7 +325,7 @@
                         android:text="Add to chart"
                         android:textColor="@color/white"
                         android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                 </androidx.cardview.widget.CardView>
 

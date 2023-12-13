@@ -11,7 +11,5 @@ object HandlerDB {
             "favoritos_db"
         )
             .allowMainThreadQueries().build()
-
-
     }
 }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.ecommerce.R
+import com.ecommerce.database.HandlerDB
 import com.ecommerce.databinding.FragmentDetailBinding
 import com.ecommerce.model.DessertEntity
 import com.ecommerce.model.DessertItem
@@ -33,13 +34,15 @@ class DetailFragment : Fragment() {
         Glide.with(this).load(dessertItem.strMealThumb).into(binding.imageViewProduct)
 
 
-        val itemDB =
-            DessertEntity(dessertItem.idMeal, dessertItem.strMeal, dessertItem.strMealThumb)
-
-
         binding.btnFavorito.setOnClickListener {
+            val dessertEntity = DessertEntity(
+                dessertItem.idMeal ?: "1",
+                dessertItem.strMeal,
+                dessertItem.strMealThumb
+            )
 
-
+            val database = HandlerDB.getInstance(requireContext())
+            database.dessertDAO().addDessertDAO(dessertEntity)
         }
 
         binding.btnBack.setOnClickListener(View.OnClickListener {
