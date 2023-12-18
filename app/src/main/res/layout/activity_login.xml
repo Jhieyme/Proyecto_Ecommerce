@@ -87,7 +87,7 @@
                     android:layout_height="65dp"
                     android:singleLine="true"
                     android:drawableRight="@drawable/ic_email"
-                    android:hint="Código" />
+                    android:hint="Username" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
