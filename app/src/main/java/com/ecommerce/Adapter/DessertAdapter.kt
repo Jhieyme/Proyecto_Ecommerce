@@ -54,8 +54,6 @@ class DessertAdapter(
                     putSerializable("item", data)
                 }
 
-                // Configurar los argumentos antes de llamar a onItemClick()
-
 
                 val detailFragment = DetailFragment()
 

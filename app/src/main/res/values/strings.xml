@@ -10,5 +10,7 @@
     <string name="name_welcome"> Welcome</string>
     <string name="name_info"> Please log in with your information.</string>
     <string name="get">Get started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
