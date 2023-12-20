@@ -143,8 +143,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginBottom="15dp"
                         android:text="Seleccionar Metodo"
-                        android:textColor="@color/black"
-                        android:textSize="21dp"
+                        android:textColor="#989494"
+                        android:textSize="18dp"
 
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -206,7 +206,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout"
-                        android:layout_width="300dp"
+                        android:layout_width="350dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:focusableInTouchMode="false"
@@ -230,7 +230,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/textInputLayout2"
-                        android:layout_width="300dp"
+                        android:layout_width="350dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="25dp"
                         android:focusableInTouchMode="true"

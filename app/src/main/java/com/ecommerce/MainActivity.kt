@@ -2,6 +2,7 @@ package com.ecommerce
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
+   
         fragmentManager = supportFragmentManager
         openFragment(HomeFragment())
 
@@ -48,18 +50,18 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun showDialogLogout() {
-//        val builder = AlertDialog.Builder(this)
-//        builder.setTitle("Cerrar Sesión")
-//        builder.setMessage("¿Estás seguro que deseas cerrar sesión?")
-//        builder.setPositiveButton("Sí") { dialog, which ->
-//            logout()
-//        }
-//        builder.setNegativeButton("No") { dialog, which ->
-//            dialog.dismiss()
-//        }
-//        builder.show()
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Cerrar Sesión")
+        builder.setMessage("¿Estás seguro que deseas cerrar sesión?")
+        builder.setPositiveButton("Sí") { dialog, which ->
+            logout()
+        }
+        builder.setNegativeButton("No") { dialog, which ->
+            dialog.dismiss()
+        }
+        builder.show()
 
-        openFragment(CartFragment())
+
     }
 
     private fun logout() {

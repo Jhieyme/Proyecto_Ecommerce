@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.activityViewModels
 import com.bumptech.glide.Glide
 import com.ecommerce.R
@@ -21,6 +23,7 @@ class DetailFragment : Fragment() {
     lateinit var dessertItem: DessertItem
     private lateinit var binding: FragmentDetailBinding
 
+
     private val dessertVM: DessertViewModel by activityViewModels()
 
 
@@ -32,8 +35,7 @@ class DetailFragment : Fragment() {
 
         binding.textViewProductName.text = dessertItem.strMeal
         Glide.with(this).load(dessertItem.strMealThumb).into(binding.imageViewProduct)
-
-
+        var fragmentManager = requireActivity().supportFragmentManager
         binding.btnFavorito.setOnClickListener {
             val dessertEntity = DessertEntity(
                 dessertItem.idMeal ?: "1",
@@ -56,7 +58,11 @@ class DetailFragment : Fragment() {
         binding.btnAdd.setOnClickListener {
             dessertVM.addDessertVM(dessertItem)
             Toast.makeText(context, "¡Agregaste un producto!", Toast.LENGTH_SHORT)
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fcv_main, CartFragment())
+            fragmentTransaction.commit()
         }
+
 
 
 

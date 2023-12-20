@@ -89,20 +89,23 @@
     <LinearLayout
         android:id="@+id/linearLayout16"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="130dp"
+        android:layout_height="380dp"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            app:cardCornerRadius="10dp">
+            android:layout_height="match_parent"
+            android:layout_marginVertical="4dp"
+            app:cardCornerRadius="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
                 android:padding="20dp">
 
 
@@ -110,7 +113,7 @@
                     android:id="@+id/linearLayout12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -121,8 +124,7 @@
                         android:layout_height="wrap_content"
                         android:text="Total de postres:"
                         android:textColor="#B1AAA9"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/tvQntAll"
@@ -132,15 +134,16 @@
                         android:layout_weight="1"
                         android:text="(6)"
                         android:textColor="#B1AAA9"
-                        android:textSize="16dp"
+                        android:textSize="18dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvTotal"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="S/. 21.0000"
+                        android:text="S/. 185.30"
                         android:textAlignment="center"
+                        android:textColor="@color/orange"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
@@ -151,8 +154,9 @@
                     android:id="@+id/linearLayout14"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
 
-                    android:layout_marginTop="15dp"
+
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -162,9 +166,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Envio gratis:"
+
                         android:textColor="#B1AAA9"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textSize="18dp" />
 
                     <TextView
                         android:layout_width="0dp"
@@ -181,18 +185,19 @@
                         android:layout_height="wrap_content"
                         android:text="--"
                         android:textAlignment="center"
-                        android:textSize="16dp"
-                        android:textStyle="bold" />
+                        android:textSize="16dp" />
 
 
                 </LinearLayout>
 
-                <View
+                <TextView
                     android:id="@+id/view"
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="30dp"
-                    android:background="#9D9A99"
+                    android:layout_height="0dp"
+                    android:text=" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+                    android:textAlignment="center"
+                    android:textColor="#9D9A99"
+                    android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout14" />
@@ -202,7 +207,7 @@
                     android:id="@+id/linearLayout15"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -230,8 +235,9 @@
                         android:id="@+id/tvTotalCart"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="S/. 21.0000"
+                        android:text="S/. 185.30"
                         android:textAlignment="center"
+                        android:textColor="@color/orange"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
@@ -241,16 +247,16 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnPay"
-                    android:layout_width="250dp"
+                    android:layout_width="350dp"
                     android:layout_height="60dp"
                     android:backgroundTint="@color/orange"
                     android:text="Pagar"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
-                    android:textSize="16dp"
+                    android:textSize="21dp"
                     android:textStyle="bold"
                     app:cornerRadius="10dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                  android:layout_marginTop="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout15" />

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +22,6 @@ class CartFragment : Fragment() {
     private lateinit var binding: FragmentCartBinding
     private val dessertVM: DessertViewModel by activityViewModels()
 
-
     private lateinit var cartAdapter: CartAdapter
     private lateinit var rvItemsCart: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,11 +34,17 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCartBinding.inflate(inflater, container, false)
-
+        var fragmentManager = requireActivity().supportFragmentManager
 
         rvItemsCart = binding.root.findViewById(R.id.rvCartItems)
         val linearLayout = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
         rvItemsCart.layoutManager = linearLayout
+
+        binding.btnPay.setOnClickListener {
+            val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
+            fragmentTransaction.replace(R.id.fcv_main, PaymentFragment())
+            fragmentTransaction.commit()
+        }
 
 
 
