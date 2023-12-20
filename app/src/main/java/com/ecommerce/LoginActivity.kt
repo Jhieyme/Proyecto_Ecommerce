@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogin.setOnClickListener(View.OnClickListener {
-            if (binding.tilEmail.editText?.text.toString() == "admin" && binding.tilPassword.editText?.text.toString() == "1234"){
+            if (binding.tilEmail.editText?.text.toString() == "EM2023" && binding.tilPassword.editText?.text.toString() == "1234"){
                 intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()

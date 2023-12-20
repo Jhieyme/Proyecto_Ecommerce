@@ -57,7 +57,7 @@ class DetailFragment : Fragment() {
 
         binding.btnAdd.setOnClickListener {
             dessertVM.addDessertVM(dessertItem)
-            Toast.makeText(context, "¡Agregaste un producto!", Toast.LENGTH_SHORT)
+            Toast.makeText(context, "¡Agregaste un producto!", Toast.LENGTH_SHORT).show()
             val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
             fragmentTransaction.replace(R.id.fcv_main, CartFragment())
             fragmentTransaction.commit()
